@@ -1,0 +1,16 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 3 * * *' # Daily at 03:00
+
+jobs:
+  publish-docs:
+    name: Publish / Docs
+    uses: playframework/.github/.github/workflows/antora.yml@v3
+    with:
+      playbook: antora-playbook.yml
+      publish: true
