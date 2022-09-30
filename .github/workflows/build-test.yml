@@ -1,0 +1,27 @@
+name: Check
+
+on:
+  pull_request:
+
+  push:
+    branches:
+      - main # Check branch after merge
+
+concurrency:
+  # Only run once for latest commit per ref and cancel other (previous) runs.
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-docs:
+    name: Docs
+    uses: playframework/.github/.github/workflows/antora.yml@v3
+    with:
+      playbook: antora-playbook.yml
+
+  finish:
+    name: Finish
+    if: github.event_name == 'pull_request'
+    needs: # Should be last
+      - "check-docs"
+    uses: playframework/.github/.github/workflows/rtm.yml@v3

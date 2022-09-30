@@ -1,0 +1,18 @@
+site:
+  title: Playframework
+  # the 404 page and sitemap files only get generated when the url property is set
+  url: https://playframework.github.io/
+  start_page: play-soap::index.adoc
+
+content:
+  sources:
+    - url: https://github.com/playframework/play-soap.git
+      branches:
+        - 1.x
+        - main
+      start_path: docs
+
+ui:
+  bundle:
+    url: https://github.com/playframework/play-antora-ui/releases/latest/download/ui-bundle.zip
+    snapshot: true
