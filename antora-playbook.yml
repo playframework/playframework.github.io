@@ -16,3 +16,7 @@ ui:
   bundle:
     url: https://github.com/playframework/play-antora-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
+
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
