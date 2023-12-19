@@ -13,6 +13,7 @@ content:
       start_path: docs
     - url: https://github.com/playframework/play-grpc.git
       branches:
+        - 0.10.x
         - main
       start_path: docs
 
