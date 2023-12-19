@@ -11,6 +11,10 @@ content:
         - 1.x
         - main
       start_path: docs
+    - url: https://github.com/playframework/play-grpc.git
+      branches:
+        - main
+      start_path: docs
 
 ui:
   bundle:
@@ -20,3 +24,7 @@ ui:
 antora:
   extensions:
     - require: '@antora/lunr-extension'
+
+asciidoc:
+  extensions:
+    - '@asciidoctor/tabs'
