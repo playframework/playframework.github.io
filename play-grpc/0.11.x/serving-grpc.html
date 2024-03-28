@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Serving gRPC from Play :: Playframework</title>
+    <link rel="canonical" href="https://playframework.github.io/play-grpc/0.12.x/serving-grpc.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/tabs.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://playframework.github.io">Playframework</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+          <label class="filter checkbox">
+            <input type="checkbox" data-facet-filter="component:play-grpc" checked> In this project
+          </label>
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    -->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="play-grpc" data-version="0.11.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Play gRPC</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="serving-grpc.html">Serving gRPC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="consuming-grpc.html">Using a gRPC client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="gradle-support.html">Gradle support</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Play gRPC</span>
+    <span class="version">0.11.x</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../0.12.x/index.html">Play gRPC</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../0.12.x/index.html">0.12.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">0.11.x</a>
+        </li>
+        <li class="version">
+          <a href="../0.10.x/index.html">0.10.x (EOL)</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../play-soap/2.x/index.html">Play SOAP</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../play-soap/2.x/index.html">2.x</a>
+        </li>
+        <li class="version">
+          <a href="../../play-soap/1.x/index.html">1.x (EOL)</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../play-soap/2.x/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Play gRPC</a></li>
+    <li><a href="serving-grpc.html">Serving gRPC</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">0.11.x</button>
+  <div class="version-menu">
+    <a class="version" href="../0.12.x/serving-grpc.html">0.12.x</a>
+    <a class="version is-current" href="serving-grpc.html">0.11.x</a>
+    <a class="version" href="../0.10.x/serving-grpc.html">0.10.x (EOL)</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/playframework/play-grpc/edit/0.11.x/docs/modules/ROOT/pages/serving-grpc.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Serving gRPC from Play</h1>
+<div class="paragraph">
+<p>To be able to serve gRPC from a Play Framework app you must enable <a href="https://www.playframework.com/documentation/2.9.x/AkkaHttpServer#HTTP/2-support-(incubating)">HTTP/2 Support</a> with <a href="https://www.playframework.com/documentation/latest/ConfiguringHttps">HTTPS</a> and the ALPN agent.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+To use gRPC in Play Framework you must enable <a href="https://www.playframework.com/documentation/2.9.x/AkkaHttpServer#HTTP/2-support-(incubating)">HTTP/2 Support</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Generating classes from the gRPC service definition is done by adding the <a href="https://doc.akka.io/docs/akka-grpc/current/buildtools/sbt.html">Akka gRPC plugin to your sbt build</a> along with the Play gRPC generators:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-scala hljs" data-lang="scala">// in project/plugins.sbt:
+addSbtPlugin("com.lightbend.akka.grpc" % "sbt-akka-grpc" % "2.1.5")
+resolvers += Resolver.sonatypeRepo("snapshots")
+libraryDependencies += "com.typesafe.play" %% "play-grpc-generators" % "0.11.x"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you need to enable the Play server side code generator in <code>build.sbt</code>:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-sync data-sync-group-id=lang is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_scala" class="tab">
+<p>Scala</p>
+</li>
+<li id="_tabs_1_java" class="tab">
+<p>Java</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_scala--panel" class="tabpanel" aria-labelledby="_tabs_1_scala">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-scala hljs" data-lang="scala">enablePlugins(AkkaGrpcPlugin)
+import play.grpc.gen.scaladsl.PlayScalaServerCodeGenerator
+akkaGrpcExtraGenerators += PlayScalaServerCodeGenerator
+libraryDependencies += "com.typesafe.play" %% "play-grpc-runtime" % "0.11.x"</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_java--panel" class="tabpanel" aria-labelledby="_tabs_1_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-scala hljs" data-lang="scala">enablePlugins(AkkaGrpcPlugin)
+import play.grpc.gen.javadsl.PlayJavaServerCodeGenerator
+akkaGrpcExtraGenerators += PlayJavaServerCodeGenerator
+libraryDependencies += "com.typesafe.play" %% "play-grpc-runtime" % "0.11.x"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The plugin will look for <code>.proto</code> service descriptors in <code>app/protobuf</code> and output an abstract class per service that you then implement, so for example for the following protobuf descriptor:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-protobuf hljs" data-lang="protobuf">syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "example.myapp.helloworld.grpc";
+option java_outer_classname = "HelloWorldProto";
+
+package helloworld;
+
+service GreeterService {
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will get an abstract class named <span class="lang-scala"><code>example.myapp.helloworld.grpc.helloworld.AbstractGreeterServiceRouter</code>.</span> <span class="lang-java"><code>example.myapp.helloworld.grpc.AbstractGreeterServiceRouter</code>.</span>
+Create a concrete subclass implementing this wherever you see fit in your project, let&#8217;s say <code>controller.GreeterServiceImpl</code> like so:</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-sync data-sync-group-id=lang is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_scala" class="tab">
+<p>Scala</p>
+</li>
+<li id="_tabs_2_java" class="tab">
+<p>Java</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_scala--panel" class="tabpanel" aria-labelledby="_tabs_2_scala">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-scala hljs" data-lang="scala">package controllers
+
+import javax.inject.Inject
+import javax.inject.Singleton
+
+import scala.concurrent.Future
+
+import akka.actor.ActorSystem
+import example.myapp.helloworld.grpc.helloworld.AbstractGreeterServiceRouter
+import example.myapp.helloworld.grpc.helloworld.HelloReply
+import example.myapp.helloworld.grpc.helloworld.HelloRequest
+
+/** User implementation, with support for dependency injection etc */
+@Singleton
+class GreeterServiceImpl @Inject() (implicit actorSystem: ActorSystem)
+    extends AbstractGreeterServiceRouter(actorSystem) {
+
+  override def sayHello(in: HelloRequest): Future[HelloReply] = Future.successful(HelloReply(s"Hello, ${in.name}!"))
+
+}</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_java--panel" class="tabpanel" aria-labelledby="_tabs_2_java">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package controllers;
+
+import akka.actor.ActorSystem;
+import com.google.inject.Inject;
+import example.myapp.helloworld.grpc.AbstractGreeterServiceRouter;
+import example.myapp.helloworld.grpc.HelloReply;
+import example.myapp.helloworld.grpc.HelloRequest;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionStage;
+import javax.inject.Singleton;
+
+/** User implementation, with support for dependency injection etc */
+@Singleton
+public class GreeterServiceImpl extends AbstractGreeterServiceRouter {
+
+  @Inject
+  public GreeterServiceImpl(ActorSystem actorSystem) {
+    super(actorSystem);
+  }
+
+  @Override
+  public CompletionStage&lt;HelloReply&gt; sayHello(HelloRequest in) {
+    String message = String.format("Hello, %s!", in.getName());
+    HelloReply reply = HelloReply.newBuilder().setMessage(message).build();
+    return CompletableFuture.completedFuture(reply);
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>And then add the router to your Play <code>conf/routes</code> file. Note that the router already knows its own path since it is based on the package name and service name of the service and therefore the path <code>/</code> is enough to get it to end up in the right place (in this example the path will be <code>/helloworld.GreeterService</code>). It cannot be added at an arbitrary path (if you try to do so an exception will be thrown when the router is started).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">-&gt;     /   controllers.GreeterServiceImpl</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A gRPC client can now connect to the server and call the provided services.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div id="support">
+    <article class="community">
+      <h3>Community support</h3>
+      <ul>
+        <li><a href="//github.com/playframework/playframework/discussions">Discuss Forum</a></li>
+        <li><a href="//discord.gg/g5s2vtZ4Fa">Discord</a></li>
+        <li><a href="//stackoverflow.com/questions/tagged/playframework">Stackoverflow</a></li>
+      </ul>
+    </article>
+    <article class="professional">
+      <h3>Donate to our Collective</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/sponsors">If you like Play consider becoming a
+          sponsor</a></li>
+      </ul>
+    </article>
+  </div>
+  <div class="wrapper">
+    <div>
+      <h3>Play Framework</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/download">Try Play</a></li>
+        <li><a href="https://www.playframework.com/documentation/latest/Tutorials">Tutorials</a>
+        </li>
+        <li><a href="https://www.playframework.com/documentation">Documentation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Community links</h3>
+      <ul>
+        <li><a href="http://www.indeed.com/jobs?q=%22play+framework%22&l=">Jobs <em>via Indeed</em></a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Code &amp; contribution</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/code">Code &amp; contributors</a></li>
+        <li><a href="//github.com/playframework/playframework/issues">Bug tracker
+          <em>GitHub</em></a></li>
+        <li><a href="https://www.playframework.com/get-involved">Get involved</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Social networks</h3>
+      <ul>
+        <li><a href="//twitter.com/playframework"><span>Twitter</span></a></li>
+        <li><a href="//opencollective.com/playframework"><span>Open Collective</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="credits">
+    <a href="https://www.playframework.com" class="logo"><img
+      src="https://www.playframework.com/assets/images/logos/1e960a0ef2cad41e1be353eb6efe5af1-play_reverse.svg"></a>
+    <a href="https://lightbend.com" class="partner"><img
+      src="https://www.playframework.com/assets/images/logos/525b1d1a1f86ef97a29eded7e434b38c-lightbend-reverse.svg"></a>
+    <a href="https://zengularity.com" class="partner"><img
+      src="https://www.playframework.com/assets/images/logos/e73318d4c3a11ee57b9f6a1bf823d127-zengularity.png"></a>
+    <p>
+      Play Framework is released under the Apache 2 License
+    </p>
+  </div>
+  <div class="lb-legal">
+    <p>
+      &copy; 2011-2022 Lightbend |
+      <a href="https://www.lightbend.com/legal/licenses" target="_blank">Licenses</a> |
+      <a href="https://www.lightbend.com/legal/terms" target="_blank">Terms</a> |
+      <a href="https://www.lightbend.com/legal/privacy" target="_blank">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/tabs.js" data-sync-storage-key="preferred-tab"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
