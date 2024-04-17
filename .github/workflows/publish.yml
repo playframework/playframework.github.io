@@ -12,7 +12,7 @@ jobs:
   publish-docs:
     name: Publish / Docs
     if: github.event.repository.fork == false # Disable for forks
-    uses: playframework/.github/.github/workflows/antora.yml@v3
+    uses: playframework/.github/.github/workflows/antora.yml@v4
     with:
       playbook: antora-playbook.yml
       publish: true

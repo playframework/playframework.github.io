@@ -15,7 +15,7 @@ concurrency:
 jobs:
   check-docs:
     name: Docs
-    uses: playframework/.github/.github/workflows/antora.yml@v3
+    uses: playframework/.github/.github/workflows/antora.yml@v4
     with:
       playbook: antora-playbook.yml
 
@@ -24,4 +24,4 @@ jobs:
     if: github.event_name == 'pull_request'
     needs: # Should be last
       - "check-docs"
-    uses: playframework/.github/.github/workflows/rtm.yml@v3
+    uses: playframework/.github/.github/workflows/rtm.yml@v4
