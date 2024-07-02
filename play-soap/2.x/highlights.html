@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>What&#8217;s new in Play SOAP 2.x :: Playframework</title>
+    <link rel="canonical" href="https://playframework.github.io/play-soap/2.x/highlights.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/tabs.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://playframework.github.io">Playframework</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+          <label class="filter checkbox">
+            <input type="checkbox" data-facet-filter="component:play-soap" checked> In this project
+          </label>
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    -->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="play-soap" data-version="2.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Play SOAP</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="index.html">About</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="highlights.html">What&#8217;s new?</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Plugin</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="plugin/how-to-use.html">How To Use</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin/maven.html">Maven</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin/gradle.html">Gradle</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin/sbt.html">SBT</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="plugin/cli.html">CLI</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Client</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client/play-soap-client.html">Using a Play SOAP client</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client/handlers.html">Using JAX WS Handlers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="client/security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Play SOAP</span>
+    <span class="version">2.x</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../play-grpc/0.12.x/index.html">Play gRPC</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../play-grpc/0.12.x/index.html">0.12.x</a>
+        </li>
+        <li class="version">
+          <a href="../../play-grpc/0.11.x/index.html">0.11.x</a>
+        </li>
+        <li class="version">
+          <a href="../../play-grpc/0.10.x/index.html">0.10.x (EOL)</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Play SOAP</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.x</a>
+        </li>
+        <li class="version">
+          <a href="../1.x/index.html">1.x (EOL)</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Play SOAP</a></li>
+    <li><a href="highlights.html">What&#8217;s new?</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">2.x</button>
+  <div class="version-menu">
+    <a class="version is-current" href="highlights.html">2.x</a>
+    <a class="version is-missing" href="../1.x/index.html">1.x (EOL)</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/playframework/play-soap/edit/main/docs/modules/ROOT/pages/highlights.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">What&#8217;s new in Play SOAP 2.x</h1>
+<div class="sect1">
+<h2 id="_cxf_4_0"><a class="anchor" href="#_cxf_4_0"></a>CXF 4.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have upgraded CXF to the next major version, <code>4.0</code>. Because CXF <code>4.0</code> is based on <a href="https://jakarta.ee/specifications/platform/9.1/">JakartaEE 9.1</a>, all references to the <code>javax.*</code> classpath needed to be migrated to <code>jakarta.*</code>. For more details, see the <a href="https://cxf.apache.org/docs/40-migration-guide.html">CXF 4.0 release notes</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_java_11"><a class="anchor" href="#_java_11"></a>Java 11</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to support CXF <code>4.0</code>, Play SOAP 2.x now requires Java 11. <a href="https://cxf.apache.org/docs/35-migration-guide.html">CXF 3.5</a> is the last major release of CXF that supported Java 8.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div id="support">
+    <article class="community">
+      <h3>Community support</h3>
+      <ul>
+        <li><a href="//github.com/playframework/playframework/discussions">Discuss Forum</a></li>
+        <li><a href="//discord.gg/g5s2vtZ4Fa">Discord</a></li>
+        <li><a href="//stackoverflow.com/questions/tagged/playframework">Stackoverflow</a></li>
+      </ul>
+    </article>
+    <article class="professional">
+      <h3>Donate to our Collective</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/sponsors">If you like Play consider becoming a
+          sponsor</a></li>
+      </ul>
+    </article>
+  </div>
+  <div class="wrapper">
+    <div>
+      <h3>Play Framework</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/download">Try Play</a></li>
+        <li><a href="https://www.playframework.com/documentation/latest/Tutorials">Tutorials</a>
+        </li>
+        <li><a href="https://www.playframework.com/documentation">Documentation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Community links</h3>
+      <ul>
+        <li><a href="http://www.indeed.com/jobs?q=%22play+framework%22&l=">Jobs <em>via Indeed</em></a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Code &amp; contribution</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/code">Code &amp; contributors</a></li>
+        <li><a href="//github.com/playframework/playframework/issues">Bug tracker
+          <em>GitHub</em></a></li>
+        <li><a href="https://www.playframework.com/get-involved">Get involved</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Social networks</h3>
+      <ul>
+        <li><a href="//twitter.com/playframework"><span>Twitter</span></a></li>
+        <li><a href="//opencollective.com/playframework"><span>Open Collective</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="credits">
+    <a href="https://www.playframework.com" class="logo"><img
+      src="https://www.playframework.com/assets/images/logos/1e960a0ef2cad41e1be353eb6efe5af1-play_reverse.svg"></a>
+    <a href="https://lightbend.com" class="partner"><img
+      src="https://www.playframework.com/assets/images/logos/525b1d1a1f86ef97a29eded7e434b38c-lightbend-reverse.svg"></a>
+    <a href="https://zengularity.com" class="partner"><img
+      src="https://www.playframework.com/assets/images/logos/e73318d4c3a11ee57b9f6a1bf823d127-zengularity.png"></a>
+    <p>
+      Play Framework is released under the Apache 2 License
+    </p>
+  </div>
+  <div class="lb-legal">
+    <p>
+      &copy; 2011-2022 Lightbend |
+      <a href="https://www.lightbend.com/legal/licenses" target="_blank">Licenses</a> |
+      <a href="https://www.lightbend.com/legal/terms" target="_blank">Terms</a> |
+      <a href="https://www.lightbend.com/legal/privacy" target="_blank">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/tabs.js" data-sync-storage-key="preferred-tab"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Play SOAP :: Playframework</title>
+    <link rel="canonical" href="https://playframework.github.io/play-soap/2.x/index.html">
+    <meta name="generator" content="Antora 3.1.5">
+    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/vendor/tabs.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://playframework.github.io">Playframework</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+          <label class="filter checkbox">
+            <input type="checkbox" data-facet-filter="component:play-soap" checked> In this project
+          </label>
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!--
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+    -->
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="play-soap" data-version="1.x">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Play SOAP</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Getting started</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="sbt-wsdl.html">Installation and using SbtWsdl</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="play-soap-client.html">Using a Play SOAP client</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Advanced</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="handlers.html">Using JAX WS Handlers</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="security.html">Security</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Play SOAP</span>
+    <span class="version">1.x (EOL)</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../play-grpc/0.12.x/index.html">Play gRPC</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../play-grpc/0.12.x/index.html">0.12.x</a>
+        </li>
+        <li class="version">
+          <a href="../../play-grpc/0.11.x/index.html">0.11.x</a>
+        </li>
+        <li class="version">
+          <a href="../../play-grpc/0.10.x/index.html">0.10.x (EOL)</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../2.x/index.html">Play SOAP</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../2.x/index.html">2.x</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">1.x (EOL)</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../2.x/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Play SOAP</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">1.x (EOL)</button>
+  <div class="version-menu">
+    <a class="version" href="../2.x/index.html">2.x</a>
+    <a class="version is-current" href="index.html">1.x (EOL)</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/playframework/play-soap/edit/1.x/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Play SOAP</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Play SOAP allows a Play application to make calls on a remote web service using SOAP.  It provides a reactive interface to doing so, making HTTP requests asynchronously and returning promises/futures of the result.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_jax_ws_support"><a class="anchor" href="#_jax_ws_support"></a>JAX WS support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Play SOAP builds on the JAX WS spec, but doesn&#8217;t implement it exactly.  JAX WS, while it does have support for making asynchronous calls, this support is somewhat clumsy, requiring all asynchronous methods to have an <code>Async</code> suffix, and requiring the passing of an <code>AsyncHandler</code> argument to handle the response, which makes it awkward to integrate into an asynchronous framework since `AsyncHandler&#8217;s do not compose well with other asynchronous constructs.  This support could be described as a second class citizen, bolted on to the spec as an after thought.</p>
+</div>
+<div class="paragraph">
+<p>In contrast, Play SOAP provides asynchronous invocation of SOAP services as a first class citizen.  Play SOAP methods all return promises, making them easy to compose with promises from other libraries, and allowing application code to be focussed on business logic, not on wiring asynchronous callbacks together.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_play_soap"><a class="anchor" href="#_using_play_soap"></a>Using Play SOAP</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Play SOAP is an sbt plugin that transforms WSDLs into SOAP client interfaces, and provides a client library that takes Play SOAP generated interfaces and dynamically implements them to make calls on remote services.  The sbt plugin is called <code>SbtWsdl</code>, and this is the starting point to installing and using Play SOAP.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <div id="support">
+    <article class="community">
+      <h3>Community support</h3>
+      <ul>
+        <li><a href="//github.com/playframework/playframework/discussions">Discuss Forum</a></li>
+        <li><a href="//discord.gg/g5s2vtZ4Fa">Discord</a></li>
+        <li><a href="//stackoverflow.com/questions/tagged/playframework">Stackoverflow</a></li>
+      </ul>
+    </article>
+    <article class="professional">
+      <h3>Donate to our Collective</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/sponsors">If you like Play consider becoming a
+          sponsor</a></li>
+      </ul>
+    </article>
+  </div>
+  <div class="wrapper">
+    <div>
+      <h3>Play Framework</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/download">Try Play</a></li>
+        <li><a href="https://www.playframework.com/documentation/latest/Tutorials">Tutorials</a>
+        </li>
+        <li><a href="https://www.playframework.com/documentation">Documentation</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Community links</h3>
+      <ul>
+        <li><a href="http://www.indeed.com/jobs?q=%22play+framework%22&l=">Jobs <em>via Indeed</em></a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Code &amp; contribution</h3>
+      <ul>
+        <li><a href="https://www.playframework.com/code">Code &amp; contributors</a></li>
+        <li><a href="//github.com/playframework/playframework/issues">Bug tracker
+          <em>GitHub</em></a></li>
+        <li><a href="https://www.playframework.com/get-involved">Get involved</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Social networks</h3>
+      <ul>
+        <li><a href="//twitter.com/playframework"><span>Twitter</span></a></li>
+        <li><a href="//opencollective.com/playframework"><span>Open Collective</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="credits">
+    <a href="https://www.playframework.com" class="logo"><img
+      src="https://www.playframework.com/assets/images/logos/1e960a0ef2cad41e1be353eb6efe5af1-play_reverse.svg"></a>
+    <a href="https://lightbend.com" class="partner"><img
+      src="https://www.playframework.com/assets/images/logos/525b1d1a1f86ef97a29eded7e434b38c-lightbend-reverse.svg"></a>
+    <a href="https://zengularity.com" class="partner"><img
+      src="https://www.playframework.com/assets/images/logos/e73318d4c3a11ee57b9f6a1bf823d127-zengularity.png"></a>
+    <p>
+      Play Framework is released under the Apache 2 License
+    </p>
+  </div>
+  <div class="lb-legal">
+    <p>
+      &copy; 2011-2022 Lightbend |
+      <a href="https://www.lightbend.com/legal/licenses" target="_blank">Licenses</a> |
+      <a href="https://www.lightbend.com/legal/terms" target="_blank">Terms</a> |
+      <a href="https://www.lightbend.com/legal/privacy" target="_blank">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/tabs.js" data-sync-storage-key="preferred-tab"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script src="../../_/js/vendor/lunr.js"></script>
+<script src="../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../.." data-snippet-length="100" data-stylesheet="../../_/css/search.css"></script>
+<script async src="../../search-index.js"></script>
+  </body>
+</html>
