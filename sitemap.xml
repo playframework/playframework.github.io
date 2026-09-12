@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://playframework.github.io/sitemap-play-grpc.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://playframework.github.io/sitemap-play-soap.xml</loc>
+</sitemap>
+</sitemapindex>
